@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'pontos_turisticos',
     'atracoes',
-    'logradouro'
+    'logradouro',
+    'comentarios',
+    'avaliacoes'
 ]
 
 MIDDLEWARE = [

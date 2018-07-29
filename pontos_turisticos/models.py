@@ -8,7 +8,7 @@ class PontoTuristico(models.Model):
 	descricao = models.TextField()
 	aprovado = models.BooleanField(default=False)
 	atracao = models.ManyToManyField(Atracao)
-	logradouro = models.ForeignKey(Logradouro, on_delete=models.CASCADE)
+	logradouro = models.ForeignKey(Logradouro, on_delete=models.CASCADE, null=True, blank=True)
 
 	def __str__(self):
 		return self.nome

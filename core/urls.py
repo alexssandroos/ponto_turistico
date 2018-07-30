@@ -21,6 +21,8 @@ from atracoes.api.viewsets import AtracaoViewSet
 from logradouro.api.viewsets import LogradouroViewSet
 from comentarios.api.viewsets import ComentarioViewSet
 from avaliacoes.api.viewsets import AvaliacaoViewSet
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 router = routers.DefaultRouter()
@@ -33,4 +35,4 @@ router.register(r'avaliacao',AvaliacaoViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls))
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

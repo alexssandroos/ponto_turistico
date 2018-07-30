@@ -9,6 +9,7 @@ class PontoTuristico(models.Model):
 	aprovado = models.BooleanField(default=False)
 	atracao = models.ManyToManyField(Atracao)
 	logradouro = models.ForeignKey(Logradouro, on_delete=models.CASCADE, null=True, blank=True)
+	foto = models.ImageField(upload_to='pontos_turisticos', null=True, blank=True)
 
 	def __str__(self):
 		return self.nome

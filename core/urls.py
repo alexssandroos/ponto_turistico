@@ -19,11 +19,16 @@ from rest_framework import routers
 from pontos_turisticos.api.viewsets import PontoTuristicoViewSet
 from atracoes.api.viewsets import AtracaoViewSet
 from logradouro.api.viewsets import LogradouroViewSet
+from comentarios.api.viewsets import ComentarioViewSet
+from avaliacoes.api.viewsets import AvaliacaoViewSet
+
 
 router = routers.DefaultRouter()
-router.register(r'pontoturistico', PontoTuristicoViewSet)
+router.register(r'pontoturistico', PontoTuristicoViewSet, base_name='PontoTuristico')
 router.register(r'atracao', AtracaoViewSet)
 router.register(r'logradouro',LogradouroViewSet)
+router.register(r'comentario',ComentarioViewSet)
+router.register(r'avaliacao',AvaliacaoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     'pontos_turisticos',
     'atracoes',
     'logradouro',
@@ -128,3 +129,9 @@ STATIC_URL = '/static/'
 # Imagens no Django 
 MEDIA_ROOT = 'images'
 MEDIA_URL = '/images/'
+
+# Filtros nas URLS 
+# http://www.django-rest-framework.org/api-guide/filtering/#djangofilterbackend
+REST_FRAMEWORK = {
+'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+}

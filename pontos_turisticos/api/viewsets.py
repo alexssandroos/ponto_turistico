@@ -5,6 +5,7 @@ from .serializers import PontoTuristicoSerializer
 class PontoTuristicoViewSet(ModelViewSet):
 
 	serializer_class = PontoTuristicoSerializer
+	lookup_field = 'nome'
 
 # FIltros personalizados no queryset podem ser feitos com a subscricao 
 # do metodo get_queryset, feito isso no core deve ser passado o parametro

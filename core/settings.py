@@ -133,6 +133,10 @@ MEDIA_URL = '/images/'
 
 # Filtros nas URLS 
 # http://www.django-rest-framework.org/api-guide/filtering/#djangofilterbackend
+# autentication by token 
+# http://www.django-rest-framework.org/api-guide/authentication/#tokenauthentication
 REST_FRAMEWORK = {
-'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+ 'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',)
 }
